@@ -11,29 +11,20 @@ class Calc
 end
 
 class TestCalc < Minitest::Test
-  def test_sub
-    calc = Calc.new
-    result = calc.sub(3, 1)
-    assert_equal(2, result)
+  def setup
+   @calc = Calc.new
+  end
 
-    calc = Calc.new
-    result = calc.sub(5, 1)
-    assert_equal(4, result)
+  def test_sub
+    assert_equal(2, @calc.sub(3, 1))
+    assert_equal(4, @calc.sub(5, 1))
   end
 
   def test_div
-    calc = Calc.new
-    result = calc.div(4, 2)
-    assert_equal(2, result)
-
-    calc = Calc.new
-    result = calc.div(6, 2)
-    assert_equal(3, result)
-
-
+    assert_equal(2, @calc.div(4, 2))
+    assert_equal(3, @calc.div(6, 2))
     assert_raises(ZeroDivisionError) do
-      calc = Calc.new
-      calc.div(0, 0)
+      @calc.div(0, 0)
     end
   end
 end
