@@ -1,6 +1,6 @@
 class VendingMachine
-  def push_button
-    'コーラ'
+  def push_button(beverage)
+    beverage
   end
 
   def insert(coin)
