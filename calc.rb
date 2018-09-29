@@ -2,7 +2,7 @@ require 'minitest/autorun'
 
 class Calc
   def sub(a, b)
-    2
+    a - b
   end
 end
 
