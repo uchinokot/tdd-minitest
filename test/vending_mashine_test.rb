@@ -5,7 +5,7 @@ class TestVendingMachine < Minitest::Test
   def test_push_button
     vending_machine = VendingMachine.new
     vending_machine.insert(100)
-    assert_equal(VendingMachine.push_button, 'コーラ')
+    assert_equal(vending_machine.push_button, 'コーラ')
   end
 
   def test_insert
