@@ -6,7 +6,7 @@ class Calc
   end
 
   def div(a, b)
-    2
+    a / b
   end
 end
 
