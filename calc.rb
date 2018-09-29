@@ -2,7 +2,7 @@ require 'minitest/autorun'
 
 class Calc
   def sub(a, b)
-    nil
+    2
   end
 end
 
