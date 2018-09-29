@@ -29,5 +29,11 @@ class TestCalc < Minitest::Test
     calc = Calc.new
     result = calc.div(6, 2)
     assert_equal(3, result)
+
+
+    assert_raises(ZeroDivisionError) do
+      calc = Calc.new
+      calc.div(0, 0)
+    end
   end
 end
