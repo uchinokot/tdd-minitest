@@ -1,5 +1,5 @@
 class VendingMachine
-  def self.push_button
+  def push_button
     'コーラ'
   end
 
