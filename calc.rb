@@ -11,5 +11,9 @@ class TestCalc < Minitest::Test
     calc = Calc.new
     result = calc.sub(3, 1)
     assert_equal(2, result)
+
+    calc = Calc.new
+    result = calc.sub(5, 1)
+    assert_equal(4, result)
   end
 end
