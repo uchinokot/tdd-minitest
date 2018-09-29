@@ -1,5 +1,5 @@
 class VendingMachine
-  def select
+  def push_button
     'コーラ'
   end
 end
