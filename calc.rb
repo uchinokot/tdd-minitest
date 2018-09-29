@@ -25,5 +25,9 @@ class TestCalc < Minitest::Test
     calc = Calc.new
     result = calc.div(4, 2)
     assert_equal(2, result)
+
+    calc = Calc.new
+    result = calc.div(6, 2)
+    assert_equal(3, result)
   end
 end
