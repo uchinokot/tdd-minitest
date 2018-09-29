@@ -4,6 +4,10 @@ class Calc
   def sub(a, b)
     a - b
   end
+
+  def div(a, b)
+    nil
+  end
 end
 
 class TestCalc < Minitest::Test
@@ -15,5 +19,11 @@ class TestCalc < Minitest::Test
     calc = Calc.new
     result = calc.sub(5, 1)
     assert_equal(4, result)
+  end
+
+  def test_div
+    calc = Calc.new
+    result = calc.div(4, 2)
+    assert_equal(2, result)
   end
 end
