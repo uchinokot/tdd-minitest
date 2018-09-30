@@ -13,6 +13,20 @@ class TestVendingMachine < Minitest::Test
     assert_equal('炭酸水', @vending_machine.push_button('炭酸水'))
   end
 
+  def test_push_button_for_redbul
+    @vending_machine.insert(100)
+    result = @vending_machine.push_button('レッドブル')
+    assert_equal(nil, result)
+
+    @vending_machine.insert(100)
+    result = @vending_machine.push_button('レッドブル')
+    assert_equal('レッドブル', result)
+
+    @vending_machine.insert(100)
+    result = @vending_machine.push_button('レッドブル')
+    assert_equal('レッドブル', result)
+  end
+
   def test_insert
     result = @vending_machine.insert(100)
     assert_equal(100, result)
