@@ -1,11 +1,20 @@
 class VendingMachine
   attr_accessor :total_inserted_price
+  PRICE_REDBULL = 200
 
   def initialize
     @total_inserted_price = 0
   end
 
   def push_button(beverage)
+    case beverage
+    when 'レッドブル'
+      if total_inserted_price >= PRICE_REDBULL
+        return 'レッドブル'
+      else
+        return nil
+      end
+    end
     beverage
   end
 
