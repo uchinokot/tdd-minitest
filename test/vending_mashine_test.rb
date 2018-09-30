@@ -9,7 +9,6 @@ class TestVendingMachine < Minitest::Test
   def test_push_button
     @vending_machine.insert(100)
     assert_equal('コーラ', @vending_machine.push_button('コーラ'))
-    assert_equal('ウーロン茶', @vending_machine.push_button('ウーロン茶'))
     assert_equal('炭酸水', @vending_machine.push_button('炭酸水'))
   end
 
