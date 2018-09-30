@@ -1,6 +1,7 @@
 class VendingMachine
   attr_accessor :total_inserted_price
   PRICE_REDBULL = 200
+  PRICE_COKE = 150
   PRICE_OLONG_TEA = 120
   PRICE_SPARKLING_WATER = 100
 
@@ -13,6 +14,12 @@ class VendingMachine
     when 'レッドブル'
       if total_inserted_price >= PRICE_REDBULL
         return 'レッドブル'
+      else
+        return nil
+      end
+    when 'コーラ'
+      if total_inserted_price >= PRICE_COKE
+        return 'コーラ'
       else
         return nil
       end
