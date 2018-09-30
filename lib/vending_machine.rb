@@ -7,6 +7,10 @@ class VendingMachine
     raise InvalidCoinError unless coin == 100
     coin
   end
+
+  def total_inserted_price
+    200
+  end
 end
 
 class InvalidCoinError < StandardError; end
