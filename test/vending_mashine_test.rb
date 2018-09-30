@@ -25,18 +25,20 @@ class TestVendingMachine < Minitest::Test
     assert_raises(InvalidCoinError) do
       vending_machine.insert(200)
     end
+  end
 
+  def test_total_insert_price
     vending_machine = VendingMachine.new
     vending_machine.insert(100)
     vending_machine.insert(100)
     total_inserted_price = vending_machine.total_inserted_price
-    assert_equal(total_inserted_price, 200)
+    assert_equal(200, total_inserted_price)
 
     vending_machine = VendingMachine.new
     vending_machine.insert(100)
     vending_machine.insert(100)
     vending_machine.insert(100)
     total_inserted_price = vending_machine.total_inserted_price
-    assert_equal(total_inserted_price, 300)
+    assert_equal(300, total_inserted_price)
   end
 end
