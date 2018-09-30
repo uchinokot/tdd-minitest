@@ -2,6 +2,7 @@ class VendingMachine
   attr_accessor :total_inserted_price
   PRICE_REDBULL = 200
   PRICE_OLONG_TEA = 120
+  PRICE_SPARKLING_WATER = 100
 
   def initialize
     @total_inserted_price = 0
@@ -18,6 +19,12 @@ class VendingMachine
     when 'ウーロン茶'
       if total_inserted_price >= PRICE_OLONG_TEA
         return 'ウーロン茶'
+      else
+        return nil
+      end
+    when '炭酸水'
+      if total_inserted_price >= PRICE_SPARKLING_WATER
+        return '炭酸水'
       else
         return nil
       end
