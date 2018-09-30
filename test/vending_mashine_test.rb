@@ -31,5 +31,12 @@ class TestVendingMachine < Minitest::Test
     vending_machine.insert(100)
     total_inserted_price = vending_machine.total_inserted_price
     assert_equal(total_inserted_price, 200)
+
+    vending_machine = VendingMachine.new
+    vending_machine.insert(100)
+    vending_machine.insert(100)
+    vending_machine.insert(100)
+    total_inserted_price = vending_machine.total_inserted_price
+    assert_equal(total_inserted_price, 300)
   end
 end
